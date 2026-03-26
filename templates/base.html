@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+</style>
+    <title>Book Store</title>
+
+    <!-- ✅ Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ✅ Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="font-family: Poppins;" class="bg-light">
+
+<!-- 🔥 NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">📚 BookStore</a>
+
+    <div>
+      <a class="btn btn-outline-light me-2" href="/">Home</a>
+      <a class="btn btn-success" href="#">Cart 🛒</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔥 CONTENT -->
+<div class="container mt-5">
+    {% block body %}{% endblock %}
+</div>
+
+</body>
+</html>
