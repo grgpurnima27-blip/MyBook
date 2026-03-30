@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="card shadow p-4 mx-auto" style="max-width:600px;">
-    <h2 class="mb-3 fw-bold">{% if form.instance.pk %}✏️ Edit Book{% else %}➕ Add New Book{% endif %}</h2>
+    <h2 class="mb-3 fw-bold text-danger">⚠️ Delete Book</h2>
+    <p class="fs-5">Are you sure you want to delete <strong>"{{ book.title }}"</strong>?</p>
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-success">{% if form.instance.pk %}Update{% else %}Save{% endif %}</button>
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
         <a href="{% url 'book_list' %}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
